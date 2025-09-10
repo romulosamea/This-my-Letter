@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apologetic Letters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Logo level 3 emblem.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 🔐 Login Modal -->
+<div id="login-modal" class="login-modal">
+    <div class="login-modal-content">
+        <h2>Pag Login</h2>
+        <form id="login-form">
+            <label for="username">Your Name</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Welcome Screen -->
+    <div class="hero">
+        <div id="welcome-screen" class="welcome-screen">
+            <div class="welcome-content">
+                <div class="welcome-image">
+                    <img src="Logo level 3 emblem.png" alt="Letter Icon" class="letter-icon">
+                </div>
+                <h1 class="welcome-title">Dear Angel</h1>
+                <p class="welcome-subtitle">Please read my Letter</p>
+                <button id="enter-btn" class="enter-btn">Open Letters</button>
+            </div>
+        </div>
+
+        <!-- Envelope -->
+        <div id="envelope-container" class="envelope-container" style="display:none;">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="envelope-body-info">
+                        <h5>To: Angel Alicaba</h5>
+                        <h5>From: Romulo (Roms)</h5>
+                        <h5>A Letter for A deep Regret and Apology.</h5>
+                    </div>
+                    <div class="paper">
+                        <p>Thank You</p>
+                    </div>
+                </div>
+                <button id="open-envelope-btn" class="open-envelope-btn">Open the Letter</button>
+            </div>
+        </div>
+
+        <div id="main-content" class="main-content" style="display: none;">
+            <header class="header">
+                <h1>A Letter of A Deep Regret and Apology</h1>
+                <h2 id="dynamic-title">Tulips Season in Netherlands</h2>
+                <button id="back-btn" class="back-btn">← Back</button>
+            </header>
+
+            <nav class="letter-nav">
+                <button class="nav-btn active" data-letter="1">From Romulo to: Angel Alicaba</button>
+            </nav>
+        
+            <main class="letter-container">
+                <div class="letter-paper">
+                    <!-- Dynamic Background Container -->
+                    <div id="dynamic-background" class="dynamic-background">
+                        <div class="background-overlay"></div>
+                    </div>
+                    
+                    <div id="letter-content" class="letter-content">
+                        <!-- Letter content will be loaded here -->
+                    </div>
+                </div>
+            </main>
+
+            <!-- Button to switch -->
+            <div style="text-align:center; margin:20px;">
+                <button id="switch-notebook-btn" class="switch-btn">Notebook Style. Note: Highlight is not function</button>
+            </div>
+
+            <!-- Notebook overlay -->
+            <div id="notebook-overlay" class="notebook-overlay">
+                <div class="notebook">
+                    <div class="notebook-header">
+                        <button id="back-buttons" class="back-buttons">Back to Whole Modal</button>
+                        <h4>Written Since June 14, 2025 - September 2025</h4>
+                    </div>
+                    <div class="notebook-content" id="notebook-content">
+                        <!-- Dynamic letter content will be injected here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="toggle-mode">
+                <button id="toggle-btn">Switch to Whole Modal</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="definition-modal" class="definition-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="word-title"></h3>
+            <p id="word-definition"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
